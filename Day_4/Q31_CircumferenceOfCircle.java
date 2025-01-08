@@ -14,5 +14,6 @@ public class Q31_CircumferenceOfCircle {
         float Circumference = 2 * (PI * radius);
 
         System.out.println("the circumference of a circle is :" + Circumference);
+        input.close();
     }
 }
