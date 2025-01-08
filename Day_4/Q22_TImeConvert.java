@@ -9,7 +9,7 @@ public class Q22_TImeConvert {
         int hours = input.nextInt();
         System.out.print("Enter minutes : ");
         int minutes = input.nextInt();
-        int second ;
+        int second;
         int totalSeconds = (hours * 60 * 60) + (minutes * 60);
 //      calculation  1 hours and 30 min = 5400 sec
 //        1 * 60 = 60
