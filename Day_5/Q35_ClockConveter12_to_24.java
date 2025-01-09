@@ -36,6 +36,7 @@ public class Q35_ClockConveter12_to_24 {
                 System.out.println("Error: Invalid Minute. Please enter a value between 0 and 59.");
             }
         }
+
         // Show Am Or PM on Time Base
 
         if (H == 0) {
