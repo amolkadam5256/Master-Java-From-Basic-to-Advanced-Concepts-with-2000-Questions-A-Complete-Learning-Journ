@@ -1,24 +1,43 @@
 public class Q40_VariableScope {
 
-    // Instance (global) variable
-    static String Globalvarable = "Globalvarable in class Q40_VariableScope";
+    // Static (global) variable
+    static String globalVariable = "Global variable in class Q40_VariableScope";
 
-    class box {
-        // Instance (global) variable in Box class
+    // Inner class `Box`
+    static class Box {
+        // Instance (non-static) variable in Box class
+        int box1 = 12;
 
-        static String Globalvarable2 = "box.Globalvarable2";
-
+        // Static variable in Box class
+        static String globalVariable2 = "Box.globalVariable2";
     }
 
     public static void main(String[] args) {
-        int age = 20;
-        fun();
+        // Local scope
+        {
+            System.err.println("Local Variables and their scope:");
+            int age = 20; // Local variable
+            System.out.println("Age: " + age);
+
+            String name = "Local Variable";
+            System.out.println("Name: " + name);
+        }
+
+        // Accessing Box class's instance and static variables
+        Box boxInstance = new Box();
+        System.err.println("Accessing Box instance variable: " + boxInstance.box1);
+
+        // Calling a static method
+        displayVariables();
     }
 
-    static void fun() {
+    static void displayVariables() {
+        // Local variable inside this method
+        String localVar = "localVariable";
+        System.out.println("Local variable inside method: " + localVar);
 
-        String localvar = "localVarable";
-        System.out.println("Instance (global) variable\n" + Q40_VariableScope.Globalvarable);
-        System.out.println("Instance (global) variable in class\n" + box.Globalvarable2);
+        // Accessing static (global) variables
+        System.out.println("Global variable in Q40_VariableScope: " + Q40_VariableScope.globalVariable);
+        System.out.println("Static variable in Box class: " + Box.globalVariable2);
     }
 }
