@@ -33,9 +33,9 @@ Welcome to **Master Java**! This repository is designed to take you on a learnin
 ## 📈 How to Get Started:
 
 1. **Clone the Repo:**
-    ```bash
-    git clone https://github.com/amolkadam5256/Master-Java-From-Basic-to-Advanced-Concepts-with-2000-Questions-A-Complete-Learning-Journey.git
-    ```
+    
+    [https://github.com/amolkadam5256/Master-Java-From-Basic-to-Advanced-Concepts-with-2000-Questions-A-Complete-Learning-Journey.git](https://github.com/amolkadam5256/Master-Java-From-Basic-to-Advanced-Concepts-with-2000-Questions-A-Complete-Learning-Journ)
+   
 
 2. **Start Practicing**: Begin solving questions from the basics and gradually progress to advanced topics. 📚
 
