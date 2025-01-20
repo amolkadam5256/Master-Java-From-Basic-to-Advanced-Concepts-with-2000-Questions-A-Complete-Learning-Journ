@@ -2,7 +2,7 @@ package PatternPrograms;
 
 import java.util.Scanner;
 
-public class Q02_Pattern {
+public class Q02_RightTrianglePattern {
     public static void main(String[] args) {
         // star pattern 1
 
@@ -13,11 +13,13 @@ public class Q02_Pattern {
         // print row
         for (int i = 1; i <= n; i++) {
 
-            // print coloum
-            for (int j = 1; j >= i; j++) {
-                System.out.print("* ");
+            // space loop
+            for (int k = n; k >= i; k--) {
+                System.out.print(" -");
             }
-            // add next line 
+            for (int j = 1; j <= i; j++) {
+                System.out.print(" *");
+            }
             System.out.println();
         }
 

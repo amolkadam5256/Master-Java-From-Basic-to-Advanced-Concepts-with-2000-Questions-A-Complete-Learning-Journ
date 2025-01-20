@@ -2,7 +2,7 @@ package PatternPrograms;
 
 import java.util.Scanner;
 
-public class Q01_Pattern {
+public class Q01_leftTrianglePattern {
     public static void main(String[] args) {
         // star pattern 1
 
