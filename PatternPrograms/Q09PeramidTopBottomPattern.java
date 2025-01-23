@@ -2,7 +2,7 @@ package PatternPrograms;
 
 import java.util.Scanner;
 
-public class Q07PeramidTopBottomPattern {
+public class Q09PeramidTopBottomPattern {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
