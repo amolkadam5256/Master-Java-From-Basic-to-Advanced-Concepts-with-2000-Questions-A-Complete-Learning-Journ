@@ -1,5 +1,3 @@
-package PatternPrograms;
-
 import java.util.Scanner;
 
 public class Q06_PyramidPattern {
