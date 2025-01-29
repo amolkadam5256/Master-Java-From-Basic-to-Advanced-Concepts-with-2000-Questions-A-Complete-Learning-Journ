@@ -1,4 +1,4 @@
-package Day_6_pratic;
+package Day_6_practice;
 
 public class StringPratic {
     public static void main(String[] args) {
