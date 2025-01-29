@@ -4,6 +4,8 @@
 // stdout. Each integer must be printed on a new line. To make the problem a
 // little easier, a portion of the code is provided for you in the editor below.
 
+package HackerRankProblems;
+
 import java.util.Scanner;
 
 public class Task1 {
