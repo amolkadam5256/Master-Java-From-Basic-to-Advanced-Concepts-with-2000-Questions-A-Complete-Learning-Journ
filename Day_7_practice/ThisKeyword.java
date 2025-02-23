@@ -5,8 +5,11 @@ public class ThisKeyword {
         System.out.println("Hello Everyone! Today we learn This Keyword in Java.");
         Car carObj = new Car("Lamborghini");
 
+        System.out.println("");
         // Creating an object of Calculator with parameters
         Calculator calcObj = new Calculator(20, 10);
+        carObj.method1();
+        System.out.println("");
 
         // Performing arithmetic operations
         System.out.println("Addition: " + calcObj.add());
@@ -24,6 +27,16 @@ class Car {
         this.carName = carName; // Assigning local parameter to instance variable
         System.out.println(this.carName); // Printing the instance variable
     }
+
+    void method1() {
+        System.out.println("Method1 is called");
+        this.method2(); // Calling another method in the same class
+    }
+
+    void method2() {
+        System.out.println("Method2 is called");
+    }
+
 }
 
 class Calculator {
