@@ -1,3 +1,5 @@
+import javax.swing.JOptionPane;
+
 public class ExplicitTypeCasting {
     public static void main(String[] args) {
 
@@ -8,5 +10,8 @@ public class ExplicitTypeCasting {
 
         System.out.println("Double value: " + num);
         System.out.println("Integer value (after casting): " + intNum);
+        
+        JOptionPane.showMessageDialog(null, "Hello, World!");
+
     }
 }
