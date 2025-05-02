@@ -1,31 +1,42 @@
 package Day_8_Pratice.StaticDemo;
 
-// 👉 Non-public class Demo (can stay in the same file as public Main)
+// 👇 Non-public class (can be in the same file as Main if not public)
 class Demo {
 
-    int x = 10; // Instance variable
+    // 🔵 Non-static (Instance) variable
+    int x = 10;
 
-    static String name = "amol"; // ✅ Static variable
+    // 🔴 Static (Class-level) variable
+    static String name = "amol";
 
-    // ✅ Static block
+    // 🔴 Static block (runs only once when class is loaded)
     static {
         System.err.println("Static block is executed");
     }
 
-    // Constructor
+    // 🔵 Constructor (called when object is created)
     public Demo() {
         System.err.println("Inside Constructor:");
-        System.err.println("x is: " + x);
-        System.err.println("name is: " + name);
+        System.err.println("x is: " + x);           // instance variable
+        System.err.println("name is: " + name);     // static variable
     }
 
-    // ✅ Static method
+    // 🔴 Static Method (can be called without object)
     public static void staticGreeting() {
         System.err.println("Hello from static method!");
-        System.err.println("Static name is: " + name);
+        System.err.println("Static name is: " + name); // access static variable directly
+        // Cannot access instance variable x here without object ❌
     }
 
-    // ✅ Static Nested Class
+    // 🔵 Non-static Method  instance Method
+    public void sum() {
+        int x = 2;
+        int y = 3;
+        int sum = x + y;
+        System.err.println("sum is :" + sum);
+    }
+
+    // 🔴 Static Nested Class
     static class InnerStaticClass {
         void show() {
             System.err.println("Inside Static Nested Class");
@@ -33,28 +44,32 @@ class Demo {
     }
 }
 
-
-
 public class Main {
 
     public static void main(String[] args) {
 
         System.err.println("Main Method Started");
 
-        // Call static method without creating object
-        Demo.staticGreeting(); // ✅
+        // ✅ Static Method - Call using class name (preferred)
+        Demo.staticGreeting();
 
-        // Create object and access non-static members
+        // ✅ Create object to access instance members
         Demo item = new Demo();
-        System.err.println("item.x = " + item.x); // instance variable
-        System.err.println("item.name = " + item.name); // static variable (via object)
 
-        // Access static variable directly using class name (Recommended)
-        System.err.println("Demo.name = " + Demo.name); // ✅
+        // ✅ Access instance variable
+        System.err.println("item.x = " + item.x); // 10
 
-        // Create object of static nested class
+        // ✅ Access static variable (not recommended via object)
+        System.err.println("item.name = " + item.name);
+
+        // ✅ Access static variable (recommended way)
+        System.err.println("Demo.name = " + Demo.name);
+
+        // ✅ Call instance method
+        item.sum();
+
+        // ✅ Access static nested class
         Demo.InnerStaticClass nested = new Demo.InnerStaticClass();
-        nested.show(); // ✅
+        nested.show();
     }
 }
-
